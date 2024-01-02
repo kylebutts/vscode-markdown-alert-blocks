@@ -1,0 +1,54 @@
+{
+	"name": "markdown-alert",
+	"displayName": "Markdown Alert Blocks",
+	"description": "Adds github alert block support to the built-in markdown preview",
+	"version": "0.1.0",
+	"publisher": "kylebutts",
+	"repository": "https://github.com/kylebutts/vscode-markdown-alert-blocks/",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"markdown.markdownItPlugins": true,
+		"markdown.previewStyles": [ "src/markdown-alert.css" ],
+		"configuration": [
+      {
+        "title": "Markdown Alert Blocks",
+        "properties": {
+          "markdown-alert.enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable/disable rendering github flavor markdown alert blocks in the built-in Markdown preview."
+          },
+					"markdown-alert.deep-enabled": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable/disable deep alert (e.g. wihthin a list). See `mdit-plugins` for examples."
+          }
+        }
+      }
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^16.18.34",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.3.3"
+	},
+	"dependencies": {
+		"@mdit/plugin-alert": "^0.8.0"
+	}
+}
