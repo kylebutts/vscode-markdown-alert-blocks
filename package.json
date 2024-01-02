@@ -3,7 +3,7 @@
 	"displayName": "Markdown Alert Blocks",
 	"description": "Adds github alert block support to the built-in markdown preview",
 	"version": "0.1.0",
-	"publisher": "kylebutts",
+	"publisher": "kylefbutts",
 	"repository": "https://github.com/kylebutts/vscode-markdown-alert-blocks/",
 	"engines": {
 		"vscode": "^1.74.0"
@@ -15,23 +15,25 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"markdown.markdownItPlugins": true,
-		"markdown.previewStyles": [ "src/markdown-alert.css" ],
+		"markdown.previewStyles": [
+			"src/markdown-alert.css"
+		],
 		"configuration": [
-      {
-        "title": "Markdown Alert Blocks",
-        "properties": {
-          "markdown-alert.enabled": {
-            "type": "boolean",
-            "default": true,
-            "description": "Enable/disable rendering github flavor markdown alert blocks in the built-in Markdown preview."
-          },
+			{
+				"title": "Markdown Alert Blocks",
+				"properties": {
+					"markdown-alert.enabled": {
+						"type": "boolean",
+						"default": true,
+						"description": "Enable/disable rendering github flavor markdown alert blocks in the built-in Markdown preview."
+					},
 					"markdown-alert.deep-enabled": {
-            "type": "boolean",
-            "default": true,
-            "description": "Enable/disable deep alert (e.g. wihthin a list). See `mdit-plugins` for examples."
-          }
-        }
-      }
+						"type": "boolean",
+						"default": true,
+						"description": "Enable/disable deep alert (e.g. wihthin a list). See `mdit-plugins` for examples."
+					}
+				}
+			}
 		]
 	},
 	"scripts": {
