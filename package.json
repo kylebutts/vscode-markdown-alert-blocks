@@ -11,7 +11,13 @@
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [],
+	"activationEvents": [
+		"onCommand:markdownAlert.insertNote",
+		"onCommand:markdownAlert.insertTip",
+		"onCommand:markdownAlert.insertImportant",
+		"onCommand:markdownAlert.insertWarning",
+		"onCommand:markdownAlert.insertCaution"
+	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"markdown.markdownItPlugins": true,
@@ -33,6 +39,28 @@
 						"description": "Enable/disable deep alert (e.g. wihthin a list). See `mdit-plugins` for examples."
 					}
 				}
+			}
+		],
+		"commands": [
+			{
+				"command": "markdownAlert.insertNote",
+				"title": "Markdown: Insert Github Note Block"
+			},
+			{
+				"command": "markdownAlert.insertTip",
+				"title": "Markdown: Insert Github Tip Block"
+			},
+			{
+				"command": "markdownAlert.insertImportant",
+				"title": "Markdown: Insert Github Important Block"
+			},
+			{
+				"command": "markdownAlert.insertWarning",
+				"title": "Markdown: Insert Github Warning Block"
+			},
+			{
+				"command": "markdownAlert.insertCaution",
+				"title": "Markdown: Insert Github Caution Block"
 			}
 		]
 	},
